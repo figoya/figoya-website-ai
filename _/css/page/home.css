@@ -1,0 +1,59 @@
+@import '/_/css/accessibility.css';
+@import '/_/css/site.css';
+@import '/_/css/animation.css';
+@import '/_/css/section/shared.css';
+@import '/_/css/section/how-we-can-help.css';
+@import '/_/css/section/did-you-know.css';
+@import '/_/css/section/esg.css';
+
+
+/*** top area with main graphic background ***/
+
+@media only screen {
+  .page.home main > div:nth-child(1) {
+    min-height: 54rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .page.home main > div:nth-child(1) {
+    min-height: 51rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .page.home main > div:nth-child(1) {
+    min-height: 54rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .page.home main > div:nth-child(1) {
+    min-height: 57rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page.home main > div:nth-child(1) {
+    min-height: 60rem;
+  }
+
+}
+
+/*** sections below the main graphic ***/
+/* all sections */
+
+@media only screen {
+  .page.home main > div:nth-child(2) > .s {
+    font-size: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page.home main > div:nth-child(2) > .s {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}

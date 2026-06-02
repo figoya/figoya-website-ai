@@ -1,0 +1,106 @@
+@media only screen {
+  .s.esg {
+    position: relative;
+    z-index: 1;
+    background: #252625;
+    padding: 4rem;
+    margin: 0 -4rem 0 -4rem;
+    color: #fff;
+  }
+  .s.esg > div:nth-child(1) {
+    margin-bottom: 3rem;
+  }
+  .s.esg > div:nth-child(2) > div:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  .c.esg.heading h2 {
+    color: #76ac41;
+  }
+  .c.esg.text p {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .c.esg.graphic figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+  }
+  .c.esg.actions {
+    margin-top: 4rem;
+  }
+  .c.esg.quote q {
+    font-size: 3rem;
+    display: block;
+    position: relative;
+    padding: 10rem 0;
+    quotes: "“" "”" "‘" "’";
+    font-style: italic;
+    color: #fff;
+  }
+  .c.esg.quote q::before {
+    content: open-quote;
+    height: 6rem;
+    font-size: 25rem;
+    line-height: 0.75;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    font-style: normal;
+    color: #76ac41;
+  }
+  .c.esg.quote q::after {
+    content: close-quote;
+    height: 6rem;
+    font-size: 25rem;
+    line-height: 0.75;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-style: normal;
+    color: #76ac41;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .c.esg.quote q {
+    padding: 4rem 8rem 4rem 10rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .s.esg > div:nth-child(2) > div:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .s.esg > div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .s.esg > div > div {
+    flex-basis: 50%;
+  }
+  .c.esg.quote {
+    padding-right: 4rem;
+  }
+  .c.esg.quote q {
+    font-size: 3rem;
+    padding: 10rem 3rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .s.esg {
+    padding: 10rem 46rem;
+    margin: 0 -46rem 0 -46rem;
+    background: #252625;
+  }
+  .c.esg.graphic img {
+    width: 80%;
+    position: relative;
+    left: -3rem;
+  }
+  .c.esg.quote {
+    margin-left: -2rem;
+    padding-right: 4rem;
+  }
+}

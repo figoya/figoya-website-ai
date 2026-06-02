@@ -1,0 +1,77 @@
+@media only screen {
+
+
+  .s.by-email .c.user-input {
+    position: relative;
+  }
+
+  .s.by-email.sending .c.user-input form {
+    visibility: hidden;
+  }
+  .s.by-email.sending .c.user-input:before{    
+    content: "sending....";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .s.by-email.sent .c.user-input form {
+    visibility: hidden;
+  }
+
+  .s.by-email.sent .c.user-input:before{    
+    content: "You message has been sent successfully";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .c.by-email.user-input {
+    font-size: 1.8rem;
+  }
+  .c.by-email.user-input > form div {
+    margin: 2rem 0;
+  }
+  .c.by-email.user-input label {
+    display: block;
+    margin: 1rem 0;
+  }
+  .c.by-email.user-input input, .c.by-email.user-input textarea {
+    display: block;
+    width: 100%;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+  }
+  .c.by-email.user-input input {
+    line-height: 2.2;
+    padding: 0 1.8rem;
+  }
+  .c.by-email.user-input textarea {
+    font-size: inherit;
+    font-family: inherit;
+    padding: 1.8rem;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .page.contact-us main > div:nth-child(2) > .s:nth-child(3n-2)::before {
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1040px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 1040px) {
+}

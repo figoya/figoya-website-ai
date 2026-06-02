@@ -1,0 +1,385 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media only screen {
+  html {
+    font-size: 0.625em;
+    font-family: "Arial", "Helvetica", sans-serif;
+    position: relative;
+    background-color: rgb(37, 38, 37);
+    scroll-behavior: smooth;
+  }
+  body > div {
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+    z-index: 1;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h2.c.how-we-can-help{color: #76ac41;}
+  h1 {
+    font-size: 5rem;
+    color: #ddd;
+    text-transform: none;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+  }
+  .page.home h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  a {
+    color: #76ac41;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  figure {
+    margin:0;
+  }
+  sub {
+    line-height: 1;
+  }
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  a.more, a.contact, button[type="submit"] {
+    text-decoration: none;
+    background: none;
+    color: #333;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border: #76ac41 solid 0.3rem;
+    cursor: pointer;
+    font-size: 1.9rem;
+    transition: margin 300ms, padding 300ms;
+  }
+  a.more.alt, a.contact.alt, button[type="submit"].alt {
+    color: white;
+  }
+  a.contact:hover, a.more:hover, button[type="submit"]:hover {
+    padding: 1.3rem 3.3rem;
+    margin: -0.3rem;
+  }
+  .page main > section ul {
+    margin: 0;
+    padding: 0 0 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  body > div {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+
+/* background */
+
+@media only screen {
+  body {
+    background-color: #fff;
+    margin: 0;
+    animation: fadein 1.5s;
+
+  }
+}
+@media only screen and (max-width: 1040px) {
+  body > div {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  main {
+    background-image: url("/_/img/figoya-landscape.webp");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80rem auto;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    background-position: -15rem -7rem;
+    background-size: 85rem auto;
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  main {
+    background-position: -15rem -9rem;
+    background-size: 95rem auto;
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+  main {
+      background-position: -25rem -28rem;
+      background-size: 125rem auto;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+      background-position: -25rem -29rem;
+      background-size: 130rem auto;
+    }
+}
+
+
+@media only screen and (min-width: 1040px) {
+  body {
+    background-image: url("/_/img/figoya-landscape.webp");
+    background-repeat: no-repeat;
+    background-position: center -37rem;
+    background-size: 192rem auto;
+    overflow-x: hidden;
+  }
+  body > div {
+    margin: auto;
+  }
+  body > div {
+    max-width: 100rem;
+  }
+  main {
+    padding: 0;
+  }
+
+}
+
+/*** all pages except home. top area with main graphic background ***/
+
+@media only screen {
+  .page:not(.home) main > div:nth-child(1) {
+    min-height: 53rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .page:not(.home) main > div:nth-child(1) {
+    min-height: 50rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .page:not(.home) main > div:nth-child(1) {
+    min-height: 55rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .page:not(.home) main > div:nth-child(1) {
+    min-height: 57rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page:not(.home) main > div:nth-child(1) {
+    min-height: 67rem;
+  }
+
+}
+
+
+/*** all pages. first section in top area with main graphic background ***/ 
+
+@media only screen {
+
+  .page main > div:nth-child(1) > .s:first-of-type a {
+    color: white;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type a:hover {
+    text-decoration: none;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.heading {
+    display: none;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.heading h2 {
+    font-size: 5rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text {
+    max-width: 32rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p {
+    font-family: "Arial Black", "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin:  0 0 1rem 0;
+    color: white;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p span{
+    font-family: "Arial Black", "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    margin:  0 0 1rem 0;
+    color: #C6D768;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p a {
+    color: white;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p:nth-child(odd),
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p:nth-child(odd) a {
+    color: white;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p:nth-child(odd),
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p:nth-child(odd) {
+    color: #C6D768;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.actions {
+    margin: 3.5rem 0 3.5rem 0;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+    margin: 1rem 0 1rem 0;
+    padding: 0.2rem 1rem 1rem 7.6rem;
+    border-radius: 2rem;
+    min-height: 5rem;
+    max-width: 60%;
+    background: #252726 url("/_/img/icon/kb.svg") no-repeat;
+    background-size: 7rem 7rem;
+    background-position: -0.3rem top;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge p {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0.5rem 0;
+  }
+
+}
+
+@media only screen and (min-width: 400px) {
+
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+    /* padding: 0.2rem 0 0.2rem 7.4rem; */
+    background-color: transparent;
+  }
+
+}
+
+@media only screen and (min-width: 500px) {
+  .page main > div:nth-child(1) > .s:first-of-type .c.text {
+    max-width: 40rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+    max-width: 29rem;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1040px) {
+
+}
+
+@media only screen and (min-width: 700px) {
+  .page main > div:nth-child(1) > .s:first-of-type .c.text {
+    max-width: 43rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p {
+    font-size: 2.2rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+
+    max-width: 35rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .page main > div:nth-child(1) > .s:first-of-type .c.text {
+    max-width: 55rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.text p {
+    font-size: 2.5rem;
+  }
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+    max-width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page main > div:nth-child(1) > .s:first-of-type .c.badge {
+    max-width: 60rem;
+  }
+}
+
+
+/*** all pages except homepage. top area with main graphic background ***/
+
+@media only screen {
+
+  /* .page:not(.home, .the-internet-pollutes) main > div:nth-child(1) {
+    min-height: 70rem;
+  } */
+}
+
+@media only screen and (min-width: 400px) {}
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 800px) {}
+
+/*** all pages except homepage. sections below the main graphic ***/
+/* all sections */
+
+@media only screen {
+  .page:not(.home) main > div:nth-child(2) > .s {
+    min-height: 50rem;
+    font-size: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .page:not(.home) main > div:nth-child(2) > .s {
+    min-height: 50rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page:not(.home) main > div:nth-child(2) > .s {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }  
+}

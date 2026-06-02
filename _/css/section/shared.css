@@ -1,0 +1,533 @@
+/* Section style A 
+  - Light BG 
+  - Image to right 
+  - Image is an info graphic
+*/
+
+
+@media only screen {
+  .s.how-much,
+  .s.green-web-apps, 
+  .s.audit,
+  .s.build{
+    position: relative;
+    z-index: 1;
+    color: #1d1d1b;
+  }
+  .s.how-much > div:nth-child(1),
+  .s.green-web-apps > div:nth-child(1),
+  .s.audit > div:nth-child(1),
+  .s.build > div:nth-child(1) {
+    margin-bottom: 3rem;
+  }
+  .c.how-much.heading h2,
+  .c.green-web-apps h2,
+  .c.audit.heading h2,
+  .c.build h2{
+    color: #76ac41;
+  }
+  .c.how-much.text p,
+  .c.green-web-apps.text p,
+  .c.audit.text p,
+  .c.build.text p {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .c.how-much.text p:first-child,
+  .c.green-web-apps.text p:first-child,
+  .c.audit.text p:first-child,
+  .c.build.text p:first-child {
+    font-weight: normal;
+    color:#76ac41;
+    font-size: 2.5rem;
+    border-top:solid 0.3rem #76ac41;
+    border-bottom:solid 0.3rem #76ac41;
+    padding:1.8rem 0rem 1.8rem 0rem;
+    line-height:3.4rem;
+  }
+  .c.how-much.graphic,
+  .c.green-web-apps.graphic,
+  .c.audit.graphic,
+  .c.build.graphic{
+    padding-top: 2rem;
+  }
+  .c.how-much.graphic img,
+  .c.green-web-apps.graphic img,
+  .c.audit.graphic img,
+  .c.build.graphic img{
+    position: relative;
+    top: 0;
+    width: 80%;
+    margin: auto;
+  }
+  .c.how-much.graphic figcaption,
+  .c.green-web-apps.graphic figcaption,
+  .c.audit.graphic figcaption,
+  .c.build.graphic figcaption{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .s.how-much .c.actions,
+  .c.green-web-apps.actions,
+  .c.audit.actions,
+  .c.build.actions{
+    margin-top: 4rem;
+  } 
+
+}
+
+@media only screen and (min-width: 400px) {
+  .c.how-much.graphic img,
+  .c.green-web-apps.graphic img,
+  .c.audit.graphic img,
+  .c.build.graphic img{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .s.how-much > div:nth-child(2),
+  .s.green-web-apps > div:nth-child(2),
+  .s.audit > div:nth-child(2),
+  .s.build > div:nth-child(2) {
+    display: flex;
+    gap: 1rem;
+  }
+  .s.how-much > div:nth-child(2) > div,
+  .s.green-web-apps > div:nth-child(2) > div,
+  .s.audit > div:nth-child(2) > div,
+  .s.build > div:nth-child(2) > div {
+    flex-basis: 50%;
+  }
+  
+  /******/
+  .c.how-much.graphic, 
+  .c.green-web-apps.graphic,
+  .c.audit.graphic,
+  .c.build.graphic{
+    padding-top: 0;
+  }
+  .c.how-much.graphic img,
+  .c.green-web-apps.graphic img,
+  .c.audit.graphic img,
+  .c.build.graphic img {
+    height: auto;
+    display: block;
+    width: 80%;
+  }
+  .c.how-much.graphic figcaption,
+  .c.green-web-apps.graphic figcaption,
+  .c.audit.graphic figcaption,
+  .c.build.graphic figcaption {
+    padding: 0 4rem;
+    width: 80%;
+  }
+  
+  /******/
+
+
+}
+
+
+/*
+   Section style B 
+  - Dark BG that stretches to the edge of the screen 
+  - Image to left
+  - Image is an info graphic
+*/
+
+
+@media only screen  {
+  .s.how,
+  .s.how-we-help,
+  .s.fix,
+  .s.teach {
+    position: relative;
+    z-index: 1;
+    background: #252625;
+    padding: 4rem;
+    margin: 0 -4rem 0 -4rem;
+    color: #fff;
+  }
+  .s.how > div:nth-child(1),
+  .s.how-we-help > div:nth-child(1),
+  .s.fix > div:nth-child(1),
+  .s.teach > div:nth-child(1) {
+    margin-bottom: 3rem;
+  }
+  .c.how.heading h2,
+  .c.how-we-help.heading h2,
+  .c.fix.heading h2,
+  .c.teach.heading h2 {
+    color: #76ac41;
+  }
+  .c.how.text p,
+  .c.how-we-help.text p,
+  .c.fix.text p,
+  .c.teach.text p {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .c.how.text p:first-child,
+  .c.how-we-help.text p:first-child,
+  .c.fix.text p:first-child,
+  .c.teach.text p:first-child{
+    font-weight: normal;
+    color:#76ac41;
+    font-size: 2.5rem;
+    border-top:solid 0.3rem #76ac41;
+    border-bottom:solid 0.3rem #76ac41;
+    padding:1.8rem 0rem 1.8rem 0rem;
+    line-height:3.4rem;
+  }
+
+  .c.how.graphic,
+  .c.how-we-help.graphic,
+  .c.fix.graphic,
+  .c.teach.graphic{
+    padding-top: 2rem;
+  }
+  .c.how.graphic img,
+  .c.how-we-help.graphic img,
+  .c.fix.graphic img,
+  .c.teach.graphic img{
+    position: relative;
+    top: 0;
+    width: 80%;
+    margin: auto;
+  }
+  .c.how.graphic figcaption,
+  .c.how-we-help.graphic figcaption,
+  .c.fix.graphic figcaption,
+  .c.teach.graphic figcaption{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .c.how.actions,
+  .c.how-we-help.actions,
+  .c.fix.actions,
+  .c.teach.actions{
+    margin-top: 4rem;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .c.how img,
+  .c.how-we-help.graphic img,
+  .c.fix.graphic img,
+  .c.teach.graphic img {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .s.how > div,
+  .s.how-we-help > div,
+  .s.fix > div,
+  .s.teach > div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .s.how > div > div,
+  .s.how-we-help > div > div,
+  .s.fix > div > div,
+  .s.teach > div > div {
+    flex-basis: 50%;
+  }
+  
+  /******/
+  .c.how.graphic,
+  .c.how-we-help.graphic,
+  .c.fix.graphic,
+  .c.teach.graphic{
+    padding-top: 0;
+  }
+  .c.how.graphic img,
+  .c.how-we-help.graphic img,
+  .c.fix.graphic img,
+  .c.teach.graphic img{
+    height: auto;
+    display: block;
+    width: 80%;
+  }
+  .c.how.graphic figcaption,
+  .c.how-we-help.graphic figcaption,
+  .c.fix.graphic figcaption,
+  .c.teach.graphic figcaption{
+    padding: 0 4rem;
+    width: 80%;
+  }
+  
+  /******/
+}
+
+@media only screen and (min-width: 1040px) {
+  .s.how,
+  .s.how-we-help,
+  .s.fix,
+  .s.teach {
+    padding: 10rem 46rem;
+    margin: 0 -46rem 0 -46rem;
+    background:#252625;
+  }
+}
+
+
+
+/* 
+  Section style C 
+  - Same as style A except image is decorative and and therefore smaller in most cases
+*/
+
+
+@media only screen {
+  .s.transparency,
+  .s.agile,
+  .s.accountability,
+  .s.did-you-know {
+    position: relative;
+    z-index: 1;
+    color: #1d1d1b;
+  }
+
+  .s.agile,
+  .s.accountability {
+    margin-bottom:8rem;
+    margin-top:8rem;
+  }
+
+  
+
+  .s.transparency > div:nth-child(1),
+  .s.agile > div:nth-child(1),
+  .s.accountability > div:nth-child(1),
+  .s.did-you-know > div:nth-child(1) {
+    margin-bottom: 3rem;
+  }
+
+  .c.transparency h2,
+  .c.agile h2,
+  .c.accountability h2,
+  .c.did-you-know h2 {
+    color: #76ac41;
+  }
+
+  .c.transparency.text p,
+  .c.agile.text p,
+  .c.accountability.text p {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .c.transparency.text.one p:first-child,
+  .c.agile.text.one p:first-child,
+  .c.accountability.one p:first-child  {
+    font-weight: normal;
+    color:#76ac41;
+    font-size: 2.5rem;
+    border-top:solid 0.3rem #76ac41;
+    border-bottom:solid 0.3rem #76ac41;
+    padding:1.8rem 0rem 1.8rem 0rem;
+    line-height:3.4rem;
+  }
+  .c.transparency.graphic,
+  .c.agile.graphic,
+  .c.accountability.graphic {
+    padding-top: 5rem;
+  }
+
+  .c.transparency.graphic img,
+  .c.agile.graphic img,
+  .c.accountability.graphic img {
+    transform: rotate(18deg);
+    filter: invert(1);
+    opacity: 0.1;
+    position: relative;
+    top: -3rem;
+    width: 50%;
+    margin: auto;
+  }
+
+
+}
+@media only screen and (min-width: 400px) {
+  .s.agile,
+  .s.accountability {
+    margin-bottom:8rem;
+    margin-top:8rem;
+  }
+
+  .c.transparency.graphic img,
+  .c.agile.graphic img,
+  .c.accountability.graphic img {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+  .s.agile,
+  .s.accountability {
+    margin-bottom:8rem;
+    margin-top:8rem;
+  }
+
+  .s.agile > div:nth-child(2),
+  .s.accountability > div:nth-child(2){
+    display: flex;
+    gap: 5rem;
+  }
+
+  .s.agile > div:nth-child(2) > div,
+  .s.accountability > div:nth-child(2) > div{
+    flex-basis: 50%;
+  }
+
+  .c.agile.graphic img,
+  .c.accountability.graphic img{
+    margin-top: 2rem;
+    width: 70%;
+  }
+
+  .c.agile.graphic,
+  .c.accountability.graphic{
+    padding-top: 0;
+  }
+}
+
+
+
+
+/* 
+  Section style D 
+  - Same as style B except image is decorative and and therfore smaller in most cases
+*/
+
+
+@media only screen  {
+  .s.by-post,
+  .s.transparency {  
+    position: relative;
+    z-index: 1;
+    background: #333;
+    padding: 4rem;
+    margin: 0 -4rem 0 -4rem;
+    color: #ddd;
+  }
+
+  .s.by-post > div:nth-child(1),
+  .s.transparency > div:nth-child(1){
+    margin-bottom: 3rem;
+  }
+
+  .c.by-post.heading h2,
+  .c.transparency.heading h2{
+    color: #76ac41;
+  }
+
+  .c.by-post.text p,
+  .c.transparency.text p  {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .c.by-post.text.one p:first-child,
+  .c.transparency.text.one p:first-child {
+    font-weight: normal;
+    color:#76ac41;
+    font-size: 2.5rem;
+    border-top:solid 0.3rem #76ac41;
+    border-bottom:solid 0.3rem #76ac41;
+    padding:1.8rem 0rem 1.8rem 0rem;
+    line-height:3.4rem;
+  }
+
+  .c.by-post.actions,
+  .c.transparency.actions {
+    margin-top: 4rem;
+  }
+
+  .c.by-post.graphic,
+  .c.transparency.graphic {
+    padding-top: 5rem;
+  }
+
+  .c.by-post.graphic img,
+  .c.transparency.graphic img {
+    transform: rotate(18deg);
+    opacity: 0.1;
+    position: relative;
+    top: -3rem;
+    width: 50%;
+    margin: auto;
+  }
+
+  .c.by-post.graphic figcaption,
+  .c.transparency.graphic figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+  }
+}
+@media only screen and (min-width: 400px) {
+
+  .c.by-post.graphic img,
+  .c.transparency.graphic img  {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+  
+  .s.by-post > div,
+  .s.transparency > div{
+    display: flex;
+    gap: 5rem;
+    /* flex-direction: row-reverse; */
+  }
+
+  .s.by-post > div > div,
+  .s.transparency > div > div{
+    flex-basis: 50%;
+  }
+
+  .c.by-post.graphic,
+  .c.transparency.graphic {
+    padding-top: 0;
+  }
+
+  .c.by-post.graphic img,
+  .c.transparency.graphic img {
+    width: 70%;
+  }
+
+  .c.by-post.graphic figcaption,
+  .c.transparency.graphic figcaption {
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .s.by-post,
+  .s.transparency {
+    padding: 10rem 46rem;
+    margin: 0 -46rem 0 -46rem;
+  }
+  .c.by-post.graphic img,
+  .c.transparency.graphic img {
+    width: 90%;
+    position: relative;
+    left: 2rem;
+  } 
+}

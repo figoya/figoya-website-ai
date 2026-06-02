@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figoya - Services</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="/_/img/favicon-128.png">
+  <link rel="stylesheet" href="/_/css/style.css?1.0.1">
+  <script defer src="/_/js/index.js" type="module"></script>
+  <script defer src="/_/js/page/contact-us.js" type="module"></script>
+</head>
+
+<body class="page contact-us">
+  <script>0</script>
+  <div>
+    <main-header page="/contact-us"></main-header>
+
+    <main>
+      <div>
+        <h1>Contact Us</h1>
+        <section class="s intro">
+          <div>
+            <h2 class="c intro heading">Summary</h2>
+            <div class="c intro text">
+              <p>We would love to hear from you</p>
+              <p>Email us by <a href="#by-email">using the form below</a>. We'll get back to you straight away.</p>
+            </div>
+            <!-- <div class="c intro actions">
+                <a class="contact" href="#by-email">Scroll to Email form</a>
+              </div> -->
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="s by-email" id="by-email">
+          <div>
+            <div class="c by-email heading">
+              <h2>Send us an email</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c by-email user-input">
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d685dd99-a622-4931-8862-e485a293fc68" />
+                <input type="hidden" name="subject" value="Email via Figoya website" />
+                <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                <fieldset>
+                  <div>
+                    <label for="c-email-form-1-name">Name</label>
+                    <input type="text" name="name" id="c-email-form-1-name" required />
+                  </div>
+                  <div>
+                    <label for="c-email-form-1-email">Email Address</label>
+                    <input type="email" name="email" id="c-email-form-1-email" required />
+                  </div>
+                  <div>
+                    <label for="c-email-form-1-phone">Phone Number (optional)</label>
+                    <input type="text" name="phone" id="c-email-form-1-phone" />
+                  </div>
+                  <div>
+                    <label for="c-email-form-1-message">Your Message</label>
+                    <textarea rows="5" name="message" id="c-email-form-1-message" required></textarea>
+                  </div>
+                  <button type="submit">
+                    Send Message
+                  </button>
+                </fieldset>
+                <p class="error"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <main-footer></main-footer>
+  </div>
+</body>
+
+</html>

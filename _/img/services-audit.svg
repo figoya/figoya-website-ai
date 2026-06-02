@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 109 109"
+	 style="enable-background:new 0 0 109 109;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#9DC41A;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#ACC113;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#7AA82C;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#D0DA5A;}
+	.st4{fill:#1D1D1B;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;}
+</style>
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" height="108.3" width="107.4" x="1" y="0.2"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g id="Layer_1_00000111170510372866673410000001260712060796687782_">
+</g>
+<g id="audit_00000114771195591614961390000012094659003811473030_">
+	<path class="st0" d="M72.2,57.4v17.1c0,1.1,0.6,2.2,1.6,2.8l14.8,8.5c1,0.6,2.2,0.6,3.2,0l14.8-8.5c1-0.6,1.6-1.6,1.6-2.8V57.4
+		c0-1.1-0.6-2.2-1.6-2.8l-14.8-8.5c-1-0.6-2.2-0.6-3.2,0l-14.8,8.5C72.8,55.2,72.2,56.2,72.2,57.4z"/>
+	<path class="st1" d="M90.4,34.4V43c0,0.6,0.3,1.1,0.8,1.4l7.4,4.3c0.5,0.3,1.1,0.3,1.6,0l7.4-4.3c0.5-0.3,0.8-0.8,0.8-1.4v-8.5
+		c0-0.6-0.3-1.1-0.8-1.4l-7.4-4.3c-0.5-0.3-1.1-0.3-1.6,0l-7.4,4.3C90.7,33.4,90.4,33.9,90.4,34.4z"/>
+	<path class="st2" d="M26.1,88.5v12.1c0,0.8,0.5,1.5,1.1,1.9l10.4,6c0.7,0.4,1.5,0.4,2.2,0l10.4-6c0.7-0.4,1.1-1.2,1.1-1.9V88.5
+		c0-0.8-0.5-1.5-1.1-1.9l-10.3-6c-0.7-0.4-1.5-0.4-2.2,0l-10.4,6C26.6,87,26.1,87.7,26.1,88.5z"/>
+	<path class="st2" d="M53.3,25.4v17.1c0,1.1,0.6,2.2,1.6,2.8l14.8,8.5c1,0.6,2.2,0.6,3.2,0l14.8-8.5c1-0.6,1.6-1.6,1.6-2.8V25.4
+		c0-1.1-0.6-2.2-1.6-2.8l-14.8-8.5c-1-0.6-2.2-0.6-3.2,0l-14.8,8.5C53.9,23.2,53.3,24.3,53.3,25.4z"/>
+	<path class="st3" d="M34.7,57.4v17.1c0,1.1,0.6,2.2,1.6,2.8l14.8,8.5c1,0.6,2.2,0.6,3.2,0l14.8-8.5c1-0.6,1.6-1.6,1.6-2.8V57.4
+		c0-1.1-0.6-2.2-1.6-2.8l-14.8-8.5c-1-0.6-2.2-0.6-3.2,0l-14.8,8.5C35.3,55.2,34.7,56.2,34.7,57.4z"/>
+	<g>
+		<path class="st4" d="M26.6,2c0.5,0,1.1,0.1,1.5,0.4l21.1,12.2c0.9,0.5,1.5,1.6,1.5,2.6v24.4c0,1.1-0.6,2.1-1.5,2.6l-21,12.3
+			c-0.5,0.3-1,0.4-1.5,0.4s-1.1-0.1-1.5-0.4L4,44.3c-0.9-0.5-1.5-1.6-1.5-2.6V17.3c0-1.1,0.6-2.1,1.5-2.6L25.1,2.4
+			C25.6,2.2,26.1,2,26.6,2 M26.6,0.5c-0.8,0-1.6,0.2-2.3,0.6L3.2,13.3c-1.4,0.9-2.2,2.4-2.2,4v24.4c0,1.6,0.9,3.1,2.3,3.9l21.1,12.2
+			c0.7,0.4,1.5,0.6,2.3,0.6s1.6-0.2,2.3-0.6l21-12.2c1.4-0.8,2.3-2.3,2.3-3.9V17.3c0-1.6-0.9-3.1-2.3-3.9L28.9,1.1
+			C28.2,0.7,27.4,0.5,26.6,0.5L26.6,0.5z"/>
+	</g>
+	<g id="Page-1_00000163044825093985417450000009497156077934022585_">
+		<g id="add_00000011022646349454835760000017778915313142882991_" transform="translate(42.666667, 64.000000)">
+			<path id="Combined-Shape_00000085246086209292200740000006392412877339433916_" class="st5" d="M-14.4-39.9
+				c4.1,0,7.5,3.3,7.5,7.5c0,1.6-0.5,3-1.3,4.2l3.8,3.8l-1.9,1.9l-3.8-3.8c-1.2,0.8-2.7,1.3-4.2,1.3c-4.1,0-7.5-3.3-7.5-7.5
+				S-18.6-39.9-14.4-39.9z M-14.4-37.2c-2.6,0-4.8,2.1-4.8,4.8s2.1,4.8,4.8,4.8s4.8-2.1,4.8-4.8S-11.8-37.2-14.4-37.2z M-23.2-33.1
+				c0,0.2,0,0.5,0,0.7c0,0.7,0.1,1.4,0.2,2h-8.4v-2.7H-23.2z M-26-48v13.6h-4.1V-48H-26z M-20.5-42.6v3.8c-1.2,1.2-2.1,2.7-2.5,4.3
+				h-1.6v-8.2h4.1V-42.6z M-15.1-45.3v4.1c-1.5,0.1-2.9,0.6-4.1,1.4v-5.5H-15.1z M-9.7-44v4.1c-1.2-0.8-2.6-1.2-4.1-1.4V-44
+				C-13.8-44-9.7-44-9.7-44z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "figoya-website",
+  "version": "1.1.1",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "http-server -p 3000 --cors",
+    "lint": "eslint --cache --ext .js"
+  },
+  "dependencies": {
+    "low-carbon-state-manager": "^0.6.1"
+  }
+}

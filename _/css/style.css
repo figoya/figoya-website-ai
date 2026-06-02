@@ -1,0 +1,13 @@
+
+@import 'accessibility.css';
+@import 'site.css';
+@import 'animation.css';
+@import 'page/home.css';
+@import 'page/contact-us.css';
+
+/* example of how to pass variables into a component */
+/* 
+  text-box {
+    --bg: none;
+  }
+*/

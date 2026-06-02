@@ -1,0 +1,52 @@
+/*** DID YOU KNOW ***/
+@media only screen {
+  .s.did-you-know > div:nth-child(2) {
+    margin: 0;
+    padding: 0;
+  }
+  .c.did-you-know.heading {
+    margin-bottom: 5rem;
+  }
+  .c.did-you-know.text {
+    border-top: 0.3rem solid #76ac41;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .c.did-you-know.text p {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .c.did-you-know.text p em {
+    font-size: 2rem;
+  }
+  .c.did-you-know.text > :last-child {
+    margin-top: auto;
+  }
+  .c.did-you-know.text a:hover {
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .c.did-you-know.heading {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .s.did-you-know > div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem 10%;
+  }
+  .c.did-you-know.text {
+    padding: 1.5rem 0;
+    flex-basis: 45%;
+    margin-top:2rem;
+    margin-bottom:1rem;
+  }
+}
+@media only screen and (min-width: 1040px) {
+}

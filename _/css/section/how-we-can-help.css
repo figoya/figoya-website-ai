@@ -1,0 +1,96 @@
+/*** HOW WE CAN HELP ***/
+@media only screen {
+  .s.how-we-can-help > div:nth-child(1) {
+    margin-bottom: 6rem;
+  }
+  .c.how-we-can-help.heading {
+    text-align: center;
+  }
+  .c.how-we-can-help.items {
+    margin-bottom: -3rem;
+  }
+  .c.how-we-can-help.items h3 {
+    font-size: 2.5rem;
+    padding-top: 6rem;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 5rem auto;
+  }
+  .c.how-we-can-help.items li {
+    margin-bottom: 3rem;
+  }
+  .c.how-we-can-help.items li.audit h3 {
+    background-image: url("/_/img/icon/analyze-svgrepo-com.svg");
+  }
+  .c.how-we-can-help.items li.fix h3 {
+    background-image: url("/_/img/icon/maintenance-documents-svgrepo-com.svg");
+  }
+  .c.how-we-can-help.items li.build h3 {
+    background-image: url("/_/img/icon/code-svgrepo-com.svg");
+  }
+  .c.how-we-can-help.items li.teach h3 {
+    background-image: url("/_/img/icon/teach-svgrepo-com.svg");
+  }
+  .c.how-we-can-help.items li > div {
+    width: 19.2rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .c.how-we-can-help.items li > div > * {
+    margin: 0 0 2rem 0;
+  }
+  .c.how-we-can-help.items li > div > :last-child {
+    margin-top: 0;
+    margin-top: auto;
+  }
+  .c.how-we-can-help.items li p {
+    font-size: 2.5rem;
+  }
+  .c.how-we-can-help.items a.more {
+    position: relative;
+    top: 0.3rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .c.how-we-can-help.items ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .c.how-we-can-help.items li {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .c.how-we-can-help.items ol {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+}
+
+@media only screen and (min-width: 950px) {
+  .c.how-we-can-help.items li {
+    flex-basis: 25%;
+  }
+  .c.how-we-can-help.heading {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .c.how-we-can-help.heading {
+    text-align: left;
+  }
+  .c.how-we-can-help.items ol {
+    justify-content: space-between;
+    margin: 0 -3rem;
+  }
+}
