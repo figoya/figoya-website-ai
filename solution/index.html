@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Solution — Figoya</title>
+  <meta name="description" content="Figoya structures meaning once, at ingestion, into a claim graph with lineage — then lets language models do what they're good at.">
+  <link rel="icon" type="image/png" sizes="128x128" href="/_/img/favicon-128.png" />
+  <link rel="stylesheet" href="/_/css/page/solution.css" />
+  <script defer src="/_/js/index.js" type="module"></script>
+</head>
+
+<body class="page solution">
+  <script>
+    0;
+  </script>
+  <div>
+    <main-header page="/solution"></main-header>
+    <main>
+      <div>
+        <h1>
+          <span>We structure meaning first.</span>
+          <span class="line-2">Then language models do what they&rsquo;re good at.</span>
+        </h1>
+        <section class="s intro">
+          <div>
+            <h2 class="c intro heading">Our Solution</h2>
+            <div class="c intro text">
+              <p>
+                Current AI asks a language model to construct meaning every time you query it. <b>Figoya removes that step</b> &mdash; the meaning-work happens once, at ingestion.
+              </p>
+              <p>
+                <span>Retrieve meaning, not text. Everything else follows.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="s build-graph">
+          <div>
+            <div class="c build-graph heading banner">
+              <h2>Build the graph</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c build-graph text">
+              <h3>Figoya Docs is the lightweight way in</h3>
+              <p>
+                Upload a document &mdash; a brief, a contract, a research summary, a memo, a specification &mdash; and Figoya returns a structured version. Claims are made <b>explicit</b>, each anchored to the paragraph it came from. Equivalent claims are <b>linked</b>. Contradictions and gaps are <b>surfaced</b>. Ambiguity is flagged rather than hidden.
+              </p>
+              <p>
+                You get two artefacts: a structured rendering you can read and review, and a machine-readable version optimised for downstream AI consumption &mdash; your own language model produces noticeably better answers when fed the structured version than the raw text. Behaviour change required of the user: <b>none</b>. Upload in, structured document out.
+              </p>
+              <h3>Figoya Ingest scales that to an organisation</h3>
+              <p>
+                Documents, emails, chats, connected systems &mdash; an organisation&rsquo;s full corpus structured into a single permission-aware claim graph. <b>The graph is the asset.</b> Every new document strengthens it. Permissions are enforced architecturally, not bolted on as tags.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="s use-graph">
+          <div>
+            <div class="c use-graph heading banner">
+              <h2>Use the graph</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c use-graph items">
+              <ol class="cards">
+                <li class="c use-graph item create">
+                  <div>
+                    <h3>Figoya <em>Create</em></h3>
+                    <p>Claim-level collaborative authoring. Multiple authors contribute claims, each with their own lineage. Structural disagreement is surfaced as graph edges, not buried in track-changes. Git for code, Figma for design, Figoya for knowledge.</p>
+                  </div>
+                </li>
+                <li class="c use-graph item people">
+                  <div>
+                    <h3>Figoya <em>People</em></h3>
+                    <p>Identity, trust and expertise as first-class citizens of the graph. Who contributed what, what they&rsquo;re credentialed for, who relies on whose claims &mdash; all queryable, all structural.</p>
+                  </div>
+                </li>
+                <li class="c use-graph item market">
+                  <div>
+                    <h3>Figoya <em>Market</em></h3>
+                    <p>Discovery, distribution, licensing and monetisation of structured knowledge. Knowledge becomes an asset that can be found, valued and exchanged.</p>
+                  </div>
+                </li>
+                <li class="c use-graph item chat">
+                  <div>
+                    <h3>Figoya <em>Chat</em></h3>
+                    <p>Team conversation with the graph underneath. Conversations feed the graph; the graph feeds the conversations. Like Slack, except the record holds together.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="s falls-out">
+          <div>
+            <div class="c falls-out heading banner">
+              <h2>What falls out of the design</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c falls-out items">
+              <ol class="cards per-3">
+                <li class="c falls-out item determinism">
+                  <div>
+                    <h3>Determinism</h3>
+                    <p>The same question yields the same meaning, every time. The wording the language model produces may vary; the substance underneath does not.</p>
+                  </div>
+                </li>
+                <li class="c falls-out item lineage">
+                  <div>
+                    <h3>Lineage</h3>
+                    <p>Every claim in every answer is traceable back to its source. You can prove what an answer rests on, claim-by-claim. Audit-grade by construction.</p>
+                  </div>
+                </li>
+                <li class="c falls-out item ceiling">
+                  <div>
+                    <h3>Ceiling</h3>
+                    <p>Better language models make Figoya better at explaining. They don&rsquo;t change what the answer rests on &mdash; that is the architecture&rsquo;s job. Figoya rides every language-model advance <em>and</em> owns the substrate underneath.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="s built">
+          <div>
+            <div class="c built heading banner">
+              <h2>Built, not merely designed</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c built text">
+              <p>
+                <b>The pipeline runs end to end today</b> &mdash; documents in, claim graph on a live graph database, structured answers out, with the query plan compiled deterministically rather than improvised by a model.
+              </p>
+              <p>
+                <b>And it is measured, not asserted.</b> We benchmark the substrate head-to-head against RAG on the same corpora and the same questions, scored by judges from a different model family than the one that did the work &mdash; and we publish comparisons only with confidence intervals attached. Headline numbers appear here as they clear that bar.
+              </p>
+              <p>
+                The strongest evidence is the working method: <b>Figoya is built using Figoya.</b> The project&rsquo;s own architecture, strategy and decisions live as a claim graph &mdash; five-hundred-odd claims across four linked corpora &mdash; and the daily working method, for humans and AI collaborators alike, is slice retrieval against it.
+              </p>
+            </div>
+            <div class="c built closer">
+              <p>Answers you can stand behind.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <main-footer></main-footer>
+  </div>
+</body>
+
+</html>

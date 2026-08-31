@@ -3,11 +3,11 @@
 @import '/_/css/animation.css';
 @import '/_/css/section/shared.css';
 @import '/_/css/section/by-email.css';
-@import '/_/css/section/via-social-media.css';
 
-@media only screen and (max-width: 800px) {
-
-  .page.contact-us main > div:nth-child(2) > .s:nth-child(3n-2)::before {
-    background: none;
+@media only screen {
+  .page.contact-us main > div:nth-child(2) > .s.by-email {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

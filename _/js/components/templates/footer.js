@@ -2,10 +2,15 @@ const template = document.createElement("template");
 template.innerHTML = `
   <footer>
     <div>
+      <section class="s brand">
+        <h2 class="visually-hidden">Figoya</h2>
+        <img class="mark" src="/_/img/figoya-logo-no-text.svg" height="70" alt="" />
+        <p class="category">Organisational Intelligence</p>
+        <p class="claim">Answers you can stand behind.</p>
+      </section>
       <section class="s social-media">
         <h2>Social Media</h2>
         <ul class="c social-media items">
-          <li><a href="https://twitter.com/FigoyaLowCarbon"><img src="/_/img/icon/twitter-1.svg" height="50" alt="Twitter icon"></a></li>
           <li><a href="https://www.linkedin.com/company/figoya/"><img src="/_/img/icon/linkedin-1.svg" height="50" alt="Linked In icon"></a></li>
         </ul>
       </section>
@@ -16,30 +21,9 @@ template.innerHTML = `
         <div class="c contact text">
           <p>Use our <a href="/contact-us">contact us page</a></p>
         </div>
-        <!-- <form class="c contact form">
-          <label>
-            <span>Your email address</span>
-            <input type="text">
-          </label>
-          <label>
-            <span>Your Message</span>
-            <textarea></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form> -->
       </section>
-      <!-- <section class="s newsletter">
-        <h2 class="c newsletter heading">Signup to our newsletter</h2>
-        <form class="c newsletter form">
-          <label>
-            <span>Your email address</span>
-            <input type="text">
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </section> -->
     </div>
-    <div>    
+    <div>
       <section class="s company">
         <h2 class="c company heading">Company details</h2>
         <dl class="c company items">
@@ -70,7 +54,7 @@ template.innerHTML = `
       <section class="s legal">
         <h2 class="c legal heading">Copyright and Privacy Policy</h2>
         <ul class="c legal items">
-          <li>Copyright © 2022. Nat Darke Limited. All rights reserved.</li>
+          <li>Copyright © 2026. Nat Darke Limited. All rights reserved.</li>
           <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
       </section>
@@ -80,8 +64,8 @@ template.innerHTML = `
 
 @media only screen {
     footer {
-      border-top: 0.1rem solid #999;
-      background-color: #333;
+      border-top: 0.4rem solid #9dc41a;
+      background-color: #252625;
       min-height: 10rem;
       color: #ccc;
       font-size: 1.5rem;
@@ -144,7 +128,7 @@ template.innerHTML = `
     }
 
     a:active {
-      outline: 2px solid rgb(196, 215, 105);
+      outline: 2px solid rgb(157, 196, 26);
       outline-offset: 5px;
     }
 
@@ -170,19 +154,35 @@ template.innerHTML = `
       display: block;
       width: 100%;
     }
-    button {
-      background: #ddd;
-      color: #333;
-      padding: .5rem 1.5rem;
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-      font-size: 1.3rem;
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    button:hover {
-      padding: .7rem 1.7rem;
-      position: relative;
-      margin: -0.2rem;
+    .s.brand .mark {
+      height: 7rem;
+      width: auto;
+      display: block;
+    }
+    .s.brand .category {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9dc41a;
+      margin: 1.6rem 0 0.6rem 0;
+      max-width: 22rem;
+    }
+    .s.brand .claim {
+      color: #ddd;
+      margin: 0 0 2rem 0;
+      max-width: 22rem;
     }
     .s.social-media {
       position: relative;
@@ -190,20 +190,6 @@ template.innerHTML = `
     footer > div:first-child {
       position: relative;
     }
-    /* footer > div:first-child::before {
-      content: " ";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.08;
-      background-image: url("/_/img/figoya-logo-no-text-bw-1.svg");
-      background-repeat: no-repeat;
-      background-position: center 12rem;
-      background-size: 20rem; 
-    }*/
     .c.social-media.items {
       display: flex;
       gap: 2rem;
@@ -221,26 +207,6 @@ template.innerHTML = `
       position: relative;
       margin-bottom: .5rem;
     }
-    .c.company.items dt::before {      
-      content: ".";
-      display: block;
-      position: absolute;
-      left: -1rem;
-      top: -.5rem;
-      width: 1rem;
-      height: 1rem;
-      color: #ddd;
-      background-size: 1rem;
-    }
-    .c.form label span {
-      display: block;
-      margin-bottom: .5rem;
-    }
-    .c.form label input,
-    .c.form label textarea {
-      display: block;
-      margin-bottom: 1rem;
-    }
     footer .s {
       margin-bottom: 3rem;
     }
@@ -248,38 +214,6 @@ template.innerHTML = `
       margin-bottom: 1rem;
       position: relative;
     }
-
-    /* SHARED */
-
-    .c.company.items dt::before,
-    .c.legal.items li::before {      
-      content: ".";
-      display: block;
-      position: absolute;
-      left: -1rem;
-      top: -.5rem;
-      width: 1rem;
-      height: 1rem;
-      color: #ddd;
-      background-size: 1rem;
-    }
-
-  }
-
-
-
-  @media only screen and (max-width: 400px) {
-
-  }
-  @media only screen and (max-width: 600px) {
-
-  }
-  @media only screen and (min-width: 600px) and (max-width: 1040px) {
-
-  }
-
-  @media only screen and (min-width: 1040px) {
-
   }
 
 </style>

@@ -8,14 +8,21 @@ template.innerHTML = `
   </div>
   <ul class="menu">
     <li><a href="/">Home</a></li>
-    <li><a href="/the-internet-pollutes">The Internet Pollutes</a></li>
-    <li><a href="/services">Services</a></li>
-    <li><a href="/how-we-work">How We Work</a></li>
-    <!-- <li><a href="/blog">Blog</a></li> -->
+    <li><a href="/problem">Problem</a></li>
+    <li><a href="/solution">Solution</a></li>
+    <li><a href="/vision">Vision</a></li>
+    <li><a href="/architecture">Architecture</a></li>
+    <li><a href="/philosophy">Philosophy</a></li>
     <li><a href="/contact-us">Contact Us</a></li>
   </ul>
   <div class="logo">
-    <img height="160" src="/_/img/figoya-logo-18.svg" alt="Figoya Logo">
+    <a href="/" aria-label="Figoya — Organisational Intelligence — home">
+      <img src="/_/img/figoya-logo-no-text.svg" alt="" />
+      <span class="lockup">
+        <span class="wordmark">Figoya</span>
+        <span class="category">Organisational Intelligence</span>
+      </span>
+    </a>
   </div>
 </header>
 <style>
@@ -36,7 +43,7 @@ template.innerHTML = `
     }
     .menu li a:hover,
     .menu li.selected a {
-      text-decoration-color: rgba(221, 221, 221, 1);
+      text-decoration-color: rgba(157, 196, 26, 1);
       text-underline-offset: 0.6em;
     }
     /* For browsers that don't support :focus-visible */
@@ -63,7 +70,7 @@ template.innerHTML = `
     }
 
     a:active {
-      outline: 2px solid rgb(196, 215, 105);
+      outline: 2px solid rgb(157, 196, 26);
       outline-offset: 5px;
     }
 
@@ -72,7 +79,7 @@ template.innerHTML = `
       border-radius: 2px;
     }
   }
-  
+
   @media only screen and (max-width: 1040px) {
     header {
       background-color: #232423;
@@ -81,19 +88,17 @@ template.innerHTML = `
     }
     .menu {
       margin: 0;
-      min-height: 25rem;
-      margin-top: -25rem;
+      min-height: 35rem;
+      margin-top: -35rem;
       transition: .3s ease-in-out;
       position: relative;
       z-index: 1;
     }
     .menu.open {
       margin-top: 0px;
-      /* box-shadow: 0 3px 10px rgba(0,0,0,0.1); */
     }
     .menu li:not(:last-child) {
       position: relative;
-      /* border-bottom: .1rem solid #999; */
     }
     .menu li a {
       padding: 0rem 2rem;
@@ -101,8 +106,6 @@ template.innerHTML = `
       line-height: 5rem;
     }
   }
-
-
 
   @media only screen and (min-width: 1040px) {
     .menu {
@@ -115,38 +118,76 @@ template.innerHTML = `
     .menu li a {
       padding: 3px 5px;
     }
-
   }
 
 
-/* logo */
+/* logo lockup: mark + wordmark + category line */
 
 @media only screen {
     .logo {
-       padding: 2rem;
+      padding: 2rem;
     }
-    .logo > img {
-        display: block;
-        width: auto;
-        height: 7rem;
-      }
+    .logo a {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      text-decoration: none;
+      width: fit-content;
     }
+    .logo img {
+      display: block;
+      width: auto;
+      height: 7rem;
+    }
+    .lockup {
+      display: block;
+    }
+    .wordmark {
+      display: block;
+      font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 1.05;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .category {
+      display: block;
+      font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: #9dc41a;
+      margin-top: 0.7rem;
+    }
+  }
   @media only screen and (min-width: 400px) {
-    .logo > img {
-        height: 9rem;
+    .logo img {
+      height: 8rem;
+    }
+    .wordmark {
+      font-size: 3.8rem;
+    }
+    .category {
+      font-size: 1.4rem;
     }
   }
   @media only screen and (min-width: 600px) {
-    .logo > img {
-      height: 12rem;
+    .logo img {
+      height: 10rem;
+    }
+    .wordmark {
+      font-size: 4.6rem;
+    }
+    .category {
+      font-size: 1.7rem;
     }
   }
   @media only screen and (min-width: 600px) and (max-width: 1040px) {
     .logo {
       padding: 3rem;
-    }
-    .logo > img {
-      height: 13rem;
     }
   }
 
@@ -154,13 +195,24 @@ template.innerHTML = `
     .logo {
       padding: 2.5rem 0 3rem 0;
     }
-    .logo > img {
-      height: 15rem;
+    .logo img {
+      height: 12rem;
     }
-    header.alt .logo > img {
+    .wordmark {
+      font-size: 5.4rem;
+    }
+    .category {
+      font-size: 2rem;
+    }
+    header.alt .logo img {
       height: 7rem;
     }
-
+    header.alt .wordmark {
+      font-size: 3.2rem;
+    }
+    header.alt .category {
+      font-size: 1.2rem;
+    }
   }
 
   /* burger */
@@ -179,7 +231,7 @@ template.innerHTML = `
       position: absolute;
       height: .6rem;
       width: 100%;
-      background: rgb(196, 215, 105);
+      background: rgb(157, 196, 26);
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
@@ -217,12 +269,6 @@ template.innerHTML = `
       height: 3rem;
       top: 1.5rem;
       right: 1.5rem;
-    }
-  }
-  
-  @media only screen and (min-width: 1040px){
-    .burger {
-      display: none;
     }
   }
 </style>

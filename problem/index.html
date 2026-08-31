@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Problem — Figoya</title>
+  <meta name="description" content="Current AI fails the work where being right matters most — and organisational knowledge has no compiler.">
+  <link rel="icon" type="image/png" sizes="128x128" href="/_/img/favicon-128.png" />
+  <link rel="stylesheet" href="/_/css/page/problem.css" />
+  <script defer src="/_/js/index.js" type="module"></script>
+</head>
+
+<body class="page problem">
+  <script>
+    0;
+  </script>
+  <div>
+    <main-header page="/problem"></main-header>
+    <main>
+      <div>
+        <h1>
+          <span>Current AI fails the work where</span>
+          <span class="line-2">being right matters most.</span>
+        </h1>
+        <section class="s intro">
+          <div>
+            <h2 class="c intro heading">The Problem</h2>
+            <div class="c intro text">
+              <p>
+                Two knowledge sources sit behind every AI answer: what the model <b>remembers</b> from training, and what retrieval <b>pulls</b> from documents. Both fail where lives and money depend on being right.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="s remembering">
+          <div>
+            <div class="c remembering heading banner">
+              <h2>When the model is remembering</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c remembering items">
+              <ul>
+                <li>
+                  <h3>The model fabricates plausible specifics when evidence is missing.</h3>
+                  <p>Names, numbers, citations, steps &mdash; confidently produced, because the model was optimised for plausible language rather than verified accuracy. The fabrications sound exactly like the correct parts of the answer, because they&rsquo;re produced by the same machinery.</p>
+                </li>
+                <li>
+                  <h3>Confidence is uniform regardless of underlying certainty.</h3>
+                  <p>Well-established fact and forum-poster conjecture come out of the model sounding equally settled. The reader has no signal to distinguish <q>I&rsquo;m confident</q> from <q>I&rsquo;m confabulating</q>.</p>
+                </li>
+                <li>
+                  <h3>Sources can&rsquo;t be traced.</h3>
+                  <p>What the model carries from training has no per-claim provenance &mdash; only weights. For work where defending an answer to a regulator or a court is part of the job, that is a dealbreaker.</p>
+                </li>
+                <li>
+                  <h3>The training data is frozen at the cutoff.</h3>
+                  <p>Updates require retraining; partial corrections aren&rsquo;t possible. The model that was right last quarter may be quietly wrong this quarter, with no signal flagging the change.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="s retrieval">
+          <div>
+            <div class="c retrieval heading banner">
+              <h2>When retrieval is doing the work</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c retrieval text">
+              <p>
+                RAG (retrieval-augmented generation) inserts a few snippets from your documents into the prompt and asks the model to construct meaning around them. It&rsquo;s a sensible workaround, but the chain is <b>structurally brittle at every step</b>.
+              </p>
+            </div>
+            <div class="c retrieval items">
+              <ul>
+                <li>
+                  <h3>Retrieval can miss the right sources or return similar-but-wrong fragments.</h3>
+                  <p>Text similarity is not the same as relevance, and snippet boundaries cut through meaningful content. The most relevant clause may sit in a paragraph the chunker split.</p>
+                </li>
+                <li>
+                  <h3>Sources are cited but rarely verifiable claim-by-claim.</h3>
+                  <p>The model cites passages without guaranteeing that the cited passage actually supports the specific claim it appears next to. Studies in legal and medical contexts have found significant rates of misattribution and outright fabrication of citations.</p>
+                </li>
+                <li>
+                  <h3>Contradictions across documents get smoothed into one fluent answer.</h3>
+                  <p>When two policies disagree, when a 2024 paper contradicts a 2019 paper, the model averages them into a single confident paragraph rather than flagging the disagreement.</p>
+                </li>
+                <li>
+                  <h3>The same question yields a different answer on a different day.</h3>
+                  <p>Search-ranking jitter, slight prompt variation, and per-query meaning reconstruction all introduce variability. Audit-grade work cannot tolerate this.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="s recall">
+          <div>
+            <div class="c recall heading banner">
+              <h2>Even perfect recall wouldn&rsquo;t be enough</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c recall text">
+              <p class="lead">
+                Organisations are dense webs of interdependent claims, and changes propagate silently.
+              </p>
+              <p>
+                A property of an entity changes in project A, and a claim in project B &mdash; one that quietly rested on it &mdash; <b>stops holding</b>. Every higher claim stacked on top, about quality, compliance or safety, becomes less defendable. Nobody notices, because the dependency lived in prose and in people&rsquo;s heads, and because it crossed a boundary between teams, systems or suppliers that no tool and no owner covers.
+              </p>
+              <p>
+                Software engineers will recognise what&rsquo;s missing. Code has a compiler: change a function&rsquo;s signature and the build breaks, loudly, at the point of change. <b>Organisational knowledge has no compiler.</b> Claims rot silently, and the cost surfaces months later disguised as an incident, an audit finding, or a lawsuit &mdash; which is why the root cause almost never gets named.
+              </p>
+              <p>
+                Requirements traceability, safety cases and data lineage each patch a corner of this, manually, inside one silo. The cross-project edge &mdash; the one that fails &mdash; belongs to nobody.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="s not-bugs">
+          <div>
+            <div class="c not-bugs heading banner">
+              <h2>These aren&rsquo;t bugs</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c not-bugs text">
+              <p>
+                The industry response to these failures has been more language models, better retrieval, longer context, multi-step agents. None of it changes the substrate underneath. <b>The failure modes are properties of the underlying material</b> &mdash; unstructured text being asked to carry meaning it doesn&rsquo;t natively encode. Bolt-on rigour helps; it doesn&rsquo;t resolve.
+              </p>
+            </div>
+            <blockquote class="c not-bugs pull">
+              Confident-but-wrong is worse than <b>visibly uncertain</b>. An answer you can&rsquo;t trace is worse than <b>no answer at all</b>.
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="s why-matters">
+          <div>
+            <div class="c why-matters heading banner">
+              <h2>Why this matters</h2>
+            </div>
+          </div>
+          <div>
+            <div class="c why-matters text">
+              <p>
+                In law, medicine, construction, mining, defence, aviation, nuclear safety, pharma manufacturing, and other industries where lives and money depend on precision, <q>roughly right</q> is professionally and legally unacceptable.
+              </p>
+              <p class="lead">
+                The gap between what current AI delivers and what these professions need is not a quality gap &mdash; it is a substrate gap.
+              </p>
+              <p>
+                That&rsquo;s the gap Figoya was built to fix.
+              </p>
+            </div>
+            <div class="c why-matters actions">
+              <a class="more" href="/solution">See how <span>Figoya fixes the substrate gap</span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <main-footer></main-footer>
+  </div>
+</body>
+
+</html>

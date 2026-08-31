@@ -1,16 +1,20 @@
-# Figoya Website
+# Figoya Website — Organisational Intelligence
 
-This is the extremely lighweight website for figoya.com
+This is the extremely lightweight website for figoya.com
 
 This website should be minimalist
 
 1. Minimal code - the lightest website in the world
 2. Minimal effort for the user to understand our message
 
-This website should explain the problem 
+This website should explain the problem
 
-- The internet has a negative impact of the environment
+- Current AI is brilliant at creating text, but careless with facts — and organisational knowledge has no compiler
 
 This website should explain our solution
 
-- We create low carbon digital products such as web apps and web sites
+- Figoya is the organisational-intelligence platform: a claim graph with lineage, so professionals get answers they can stand behind
+
+Copy source of truth: website-copy.md (v2, 2026-08-31). Code conventions: semantic HTML,
+.s/.c class system, per-section CSS under _/css/section/, per-page CSS under _/css/page/,
+low-carbon-state-manager for events/state. Type: Montserrat (variable, self-hosted, one woff2).
