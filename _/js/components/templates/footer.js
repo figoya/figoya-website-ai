@@ -84,9 +84,11 @@ template.innerHTML = `
     }
   }
   @media only screen and (min-width: 1040px) {
+    /* viewport-exact full-bleed escape (replaces the old fixed -46rem variant,
+       which overshot the viewport below 192rem and relied on body clipping) */
     footer {
-      padding: 4rem 46rem;
-      margin: 0 -46rem;
+      padding: 4rem max(4rem, calc(50vw - 50rem));
+      margin: 0 calc(50% - 50vw);
       flex-wrap: nowrap;
       justify-content: space-between;
     }

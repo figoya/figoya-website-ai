@@ -162,13 +162,24 @@ Every page MUST follow this skeleton, in this order:
 
 ## 9. The hero/wave contract
 
-- **R38 [CHECK]** The charcoal field with the lime wave is `body`'s background
-  (`wave-hero.svg`), sized per page class in site.css; the hero `div` carries a paired
-  `min-height`. The pairs live together in site.css and MUST be changed together.
-- **R39 [CHECK]** Hero content (h1 + first section + actions) MUST end above the wave: the
-  wave occupies roughly the bottom 28% of the background height, so content must fit within
-  the top 72% minus the header. Practically: keep hero text to one or two short paragraphs;
-  overflow goes into the first content section instead.
+- **R38 [CHECK]** The hero (`main > div:nth-child(1)`) paints its OWN charcoal field:
+  `background-color: #252625` on the element, with the wave (`wave-hero.svg`, a
+  transparent-topped strip) anchored `bottom center`. The field is therefore bound to the
+  hero's height and grows with its content. Nothing about the hero is ever painted on `body`.
+- **R39 [CHECK]** Legibility is a structural invariant, not a sizing agreement: the hero's
+  `padding-bottom` MUST be at least the wave's rendered height plus 4rem of clearance.
+  `min-height` values are aesthetic minimums only — content may exceed them freely.
+- **R39a [CHECK]** Full bleed from inside the constrained container uses the escape-and-repad
+  pattern: below 1040px, negative side margins mirroring `main`'s padding ladder
+  (`-2rem`/`-4rem`) with matching padding; at ≥1040px, `margin-inline: calc(50% - 50vw)` with
+  `padding-inline: max(2rem, calc(50vw - 50rem))` so children need no explicit widths — the
+  padding re-imposes the 100rem content line. The header uses the same escape at ≥1040 so
+  header and hero read as one surface. (The footer's fixed `margin: 0 -46rem` variant is the
+  same idea and is exact up to 192rem viewports.)
+- **R39b [CHECK]** `overflow-x: hidden` lives on `body` and NOWHERE ELSE — never on
+  `body > div` or any container. Container-level clipping silently kills every full-bleed
+  escape on the page (this was learned the hard way: it clipped the footer and the dark bands
+  to the 100rem box at desktop).
 - **R40 [CHECK]** The hero `h1` is two stacked spans; the second carries `class="line-2"` and
   renders lime. Hero CTAs are `a.contact` (white text variant applies automatically).
 

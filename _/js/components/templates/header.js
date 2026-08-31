@@ -108,6 +108,16 @@ template.innerHTML = `
   }
 
   @media only screen and (min-width: 1040px) {
+    /* the header paints the same charcoal field as the hero, full bleed,
+       so the two read as one surface (the host sits in the 100rem container,
+       hence the same escape-and-repad as the hero uses) */
+    header {
+      background-color: #252625;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding-left: max(2rem, calc(50vw - 50rem));
+      padding-right: max(2rem, calc(50vw - 50rem));
+    }
     .menu {
       display: flex;
       justify-content: space-between;
