@@ -233,7 +233,9 @@
   .page main > div:nth-child(1) > .s:first-of-type a:hover {
     text-decoration: none;
   }
-  .page main > div:nth-child(1) > .s:first-of-type .c.heading {
+  /* the hero heading exists for the outline but is not shown — except on the
+     homepage, where it IS the claim line (R21, R40) */
+  .page:not(.home) main > div:nth-child(1) > .s:first-of-type .c.heading {
     display: none;
   }
   .page main > div:nth-child(1) > .s:first-of-type .c.text {

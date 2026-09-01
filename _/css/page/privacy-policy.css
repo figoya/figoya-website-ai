@@ -1,0 +1,49 @@
+@import '/_/css/accessibility.css';
+@import '/_/css/site.css';
+@import '/_/css/animation.css';
+@import '/_/css/section/shared.css';
+
+/* The policy is one long legal document rather than a set of sections, so it is a single
+   prose component and takes its measure from the generic .c.text rules in shared.css.
+   Headings run h2 > h3 > h4 beneath the page h1; the deeper two drop the house uppercase,
+   which is unreadable at this length — the same relief shared.css gives item-list h3s. */
+
+@media only screen {
+  .c.policy.text h2 {
+    font-size: 2.6rem;
+    margin: 5rem 0 2rem 0;
+    padding-top: 3rem;
+    border-top: 0.3rem solid #9dc41a;
+  }
+  .c.policy.text h3 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 2.1rem;
+    margin: 3.4rem 0 1.2rem 0;
+    color: #567f2b;
+  }
+  .c.policy.text h4 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin: 2.6rem 0 1rem 0;
+  }
+  .c.policy.text ul {
+    list-style: disc;
+    padding: 0 0 0 2.4rem;
+    margin: 0 0 1.6rem 0;
+  }
+  .c.policy.text li {
+    margin-bottom: 1rem;
+  }
+  .c.policy.text li p {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .c.policy.text h2 {
+    font-size: 3.2rem;
+  }
+}

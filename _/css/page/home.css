@@ -2,3 +2,29 @@
 @import '/_/css/site.css';
 @import '/_/css/animation.css';
 @import '/_/css/section/shared.css';
+
+/* The homepage h1 is the header lockup (see _/js/components/templates/header.js), so
+   the claim line is section.intro's heading — the one hero heading that is shown
+   rather than hidden (R21), carrying the display type site.css otherwise gives h1. */
+
+@media only screen {
+  .page.home .c.intro.heading {
+    font-size: 4.2rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    padding-top: 4rem;
+  }
+  .page.home .c.intro.heading span {
+    display: block;
+  }
+  .page.home .c.intro.heading .line-2 {
+    color: #9dc41a;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .page.home .c.intro.heading {
+    font-size: 5.6rem;
+    padding-top: 6rem;
+  }
+}

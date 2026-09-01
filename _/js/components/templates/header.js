@@ -131,68 +131,57 @@ template.innerHTML = `
   }
 
 
-/* logo lockup: mark + wordmark + category line */
+  /* ---- logo lockup ----
+     One SVG carries the whole lockup (mark + FIGOYA + category) and is drawn as a
+     background on the link. The mark img and the live text stay in the DOM to supply the
+     accessible name, and are CLIPPED rather than hidden: visibility:hidden and
+     display:none would both drop them from the accessibility tree.
+     The box is sized by height alone; the width follows from the SVG's viewBox.
+     On the homepage header.js promotes .logo to h1 (see A11Y-1 in CONVENTIONS.md);
+     elsewhere the header carries .alt and the lockup stays a div and sits smaller. */
 
-@media only screen {
+  @media only screen {
     .logo {
       padding: 2rem;
     }
+    h1.logo {
+      margin: 0;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
     .logo a {
-      display: flex;
-      align-items: center;
-      gap: 1.6rem;
+      display: block;
+      height: 7rem;
+      max-width: 100%;
+      aspect-ratio: 567.23 / 166.7;
+      background: url("/_/img/figoya-oi-center-blackbg.svg") left center / contain no-repeat;
       text-decoration: none;
-      width: fit-content;
     }
     .logo img {
-      display: block;
-      width: auto;
-      height: 7rem;
+      display: none;
     }
     .lockup {
-      display: block;
-    }
-    .wordmark {
-      display: block;
-      font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-      font-weight: 800;
-      font-size: 3.4rem;
-      line-height: 1.05;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    .category {
-      display: block;
-      font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-      font-weight: 600;
-      font-size: 1.25rem;
-      letter-spacing: 0.34em;
-      text-transform: uppercase;
-      color: #9dc41a;
-      margin-top: 0.7rem;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
   }
   @media only screen and (min-width: 400px) {
-    .logo img {
+    .logo a {
       height: 8rem;
-    }
-    .wordmark {
-      font-size: 3.8rem;
-    }
-    .category {
-      font-size: 1.4rem;
     }
   }
   @media only screen and (min-width: 600px) {
-    .logo img {
+    .logo a {
       height: 10rem;
-    }
-    .wordmark {
-      font-size: 4.6rem;
-    }
-    .category {
-      font-size: 1.7rem;
     }
   }
   @media only screen and (min-width: 600px) and (max-width: 1040px) {
@@ -200,28 +189,61 @@ template.innerHTML = `
       padding: 3rem;
     }
   }
-
   @media only screen and (min-width: 1040px) {
     .logo {
       padding: 2.5rem 0 3rem 0;
     }
-    .logo img {
+    .logo a {
       height: 12rem;
     }
-    .wordmark {
-      font-size: 5.4rem;
-    }
-    .category {
-      font-size: 2rem;
-    }
-    header.alt .logo img {
+    header.alt .logo a {
       height: 7rem;
     }
-    header.alt .wordmark {
-      font-size: 3.2rem;
+  }
+
+  /* forced-colours modes drop background images, so the live lockup comes back and does
+     the job the artwork was doing. Colours are left to the forced palette. */
+  @media only screen and (forced-colors: active) {
+    .logo a {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      width: fit-content;
+      height: auto;
+      aspect-ratio: auto;
+      background: none;
     }
-    header.alt .category {
-      font-size: 1.2rem;
+    .logo img {
+      display: block;
+      width: auto;
+      height: 7rem;
+    }
+    .lockup {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      clip-path: none;
+      white-space: normal;
+      display: block;
+    }
+    .wordmark {
+      display: block;
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 1.05;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .category {
+      display: block;
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      margin-top: 0.7rem;
     }
   }
 

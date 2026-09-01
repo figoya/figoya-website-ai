@@ -10,6 +10,20 @@ class MainHeader extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    // On the homepage the lockup IS the page heading, so it is promoted to h1 and
+    // the hero claim drops to h2 (R53: exactly one h1). Elsewhere the hero keeps its
+    // own h1 and the lockup stays a plain div.
+    if (this.getAttribute("page") === "/") {
+      const logo = this.shadowRoot.querySelector("header > .logo");
+      const heading = document.createElement("h1");
+      heading.className = logo.className;
+      heading.innerHTML = logo.innerHTML;
+      logo.replaceWith(heading);
+      const link = heading.querySelector("a");
+      // as the h1's text the "— home" suffix reads oddly; aria-current says it better
+      link.setAttribute("aria-label", "Figoya — Organisational Intelligence");
+      link.setAttribute("aria-current", "page");
+    }
     this.shadowRoot.querySelectorAll("ul > li").forEach((item) => {
       const href = item.querySelector("a").getAttribute("href");
       if (this.getAttribute("page") === href) {
