@@ -84,31 +84,33 @@ heaviest asset in the repo is the 37KB font, and it should stay that way.
 ### 1.1 Project contracts
 
 Structural agreements particular to this site, binding in the same way as the rules above.
+The `SITE-` prefix is deliberate: a `FIG-` prefix would collide with the Linear team key and
+turn every rule reference into a link to an unrelated issue.
 
-- **FIG-1 [CHECK]** The hero (`main > div:nth-child(1)`) paints its own charcoal field:
+- **SITE-1 [CHECK]** The hero (`main > div:nth-child(1)`) paints its own charcoal field:
   `background-color: #252625` on the element, with `wave-hero.svg` — a transparent-topped
   strip — anchored `bottom center`. The field is bound to the hero's height and grows with
   its content. Nothing about the hero is ever painted on `body`.
-- **FIG-2 [CHECK]** Legibility here is a structural invariant, not a sizing agreement: the
+- **SITE-2 [CHECK]** Legibility here is a structural invariant, not a sizing agreement: the
   hero's `padding-bottom` must be at least the wave's rendered height plus 4rem of
   clearance. `min-height` values are aesthetic minimums only — content may exceed them.
-- **FIG-3 [CHECK]** The claim line is two stacked spans, the second carrying
+- **SITE-3 [CHECK]** The claim line is two stacked spans, the second carrying
   `class="line-2"` and rendering lime. On inner pages it is the hero `h1`; on the homepage
-  it is `section.intro`'s `h2`, because the header lockup takes the `h1` there (FIG-4).
-- **FIG-4 [CHECK]** The header lockup is drawn as artwork on every page:
+  it is `section.intro`'s `h2`, because the header lockup takes the `h1` there (SITE-4).
+- **SITE-4 [CHECK]** The header lockup is drawn as artwork on every page:
   `figoya-oi-center-blackbg.svg` (the dark-ground cut; `-whitebg` is its light-ground pair)
   as a background on `.logo a`, sized by height with `aspect-ratio` from the viewBox — 12rem
   at the desktop line, 7rem where the header carries `.alt`. The mark `img` and the live
   FIGOYA / ORGANISATIONAL INTELLIGENCE text stay in the DOM to supply the accessible name,
   removed with the clip pattern (A11Y-3) and restored under `forced-colors` (A11Y-6), which
   is the only state in which `.wordmark` and `.category` are ever painted.
-- **FIG-4a [CHECK]** On the homepage only, `header.js` promotes `div.logo` to `h1.logo`,
+- **SITE-4a [CHECK]** On the homepage only, `header.js` promotes `div.logo` to `h1.logo`,
   because the lockup is that page's heading. Inner pages leave it a `div` and keep their own
-  hero `h1` (FIG-3, A11Y-1).
-- **FIG-5 [CHECK]** The hero's first section carries a semantic `h2` in `c <name> heading`.
+  hero `h1` (SITE-3, A11Y-1).
+- **SITE-5 [CHECK]** The hero's first section carries a semantic `h2` in `c <name> heading`.
   On inner pages it is hidden — with the clip pattern, so the outline survives (A11Y-1,
-  A11Y-3); on the homepage it is shown and carries the claim (FIG-3).
-- **FIG-6 [CHECK]** Hero CTAs are `a.contact`; the white-text variant applies automatically
+  A11Y-3); on the homepage it is shown and carries the claim (SITE-3).
+- **SITE-6 [CHECK]** Hero CTAs are `a.contact`; the white-text variant applies automatically
   inside the hero.
 
 ---
@@ -519,7 +521,7 @@ Families live in `_/css/section/shared.css`: **A** prose · **B** item lists wit
 | `claim-graph` | architecture | B |
 | `claims-not-facts` | philosophy | A |
 | `falls-out` | solution | C |
-| `intro` | all | `site.css` — the hero contract (FIG-1, FIG-5) |
+| `intro` | all | `site.css` — the hero contract (SITE-1, SITE-5) |
 | `lands` | architecture | E, role-level only — no family entry |
 | `learn-more` | home | C |
 | `long-arc` | vision | D |
@@ -621,4 +623,4 @@ argument for having written them down.
   SP-2.
 - The hero heading is hidden with `display: none` in `site.css`, inherited from the
   reference — breaks A11Y-3, and means inner pages do not have the unbroken outline A11Y-1
-  requires. FIG-5 states the intended rule.
+  requires. SITE-5 states the intended rule.
