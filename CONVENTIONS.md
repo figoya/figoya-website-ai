@@ -522,15 +522,16 @@ Families live in `_/css/section/shared.css`: **A** prose · **B** item lists wit
 | `claims-not-facts` | philosophy | A |
 | `falls-out` | solution | C |
 | `intro` | all | `site.css` — the hero contract (SITE-1, SITE-5) |
-| `lands` | architecture | E, role-level only — no family entry |
+| `lands` | architecture | A |
 | `learn-more` | home | C |
 | `long-arc` | vision | D |
 | `meaning` | philosophy | A |
 | `no-oracle` | philosophy | D |
 | `not-bugs` | problem | D |
 | `oi` | home | `shared.css`, own block |
+| `oi-pain` | home | A |
 | `pattern` | vision | A |
-| `pipelines` | architecture | C |
+| `flow` | architecture | C |
 | `platform` | vision | A |
 | `policy` | privacy-policy | `page/privacy-policy.css` |
 | `privacy` | architecture | A |
@@ -540,13 +541,14 @@ Families live in `_/css/section/shared.css`: **A** prose · **B** item lists wit
 | `retrieval` | problem | B |
 | `separation` | philosophy | A |
 | `sequence` | vision | A |
+| `simplest` | home | A |
+| `simplest-pain` | home | A |
 | `standing` | philosophy | A |
-| `substrate` | architecture | D |
+| `foundation` | architecture | D |
 | `triad` | vision | C |
 | `use-graph` | solution | C |
 | `validation` | philosophy | A |
 | `verticalco` | vision | A |
-| `why-figoya` | home | C |
 | `why-matters` | problem | A |
 
 ---

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Architecture — Figoya</title>
-  <meta name="description" content="One architectural commitment: claims as the atomic unit. A claim graph with epistemic edges, slices, and three pipelines.">
+  <meta name="description" content="One commitment: what Figoya keeps is not text, it is claims. What that gives you — paragraph-level lineage, contradictions surfaced, change carried through.">
   <link rel="icon" type="image/png" sizes="128x128" href="/_/img/favicon-128.png" />
   <link rel="stylesheet" href="/_/css/page/architecture.css" />
   <script defer src="/_/js/index.js" type="module"></script>
@@ -20,15 +20,15 @@
     <main>
       <div>
         <h1>
-          <span>One commitment:</span>
-          <span class="line-2">claims as the atomic unit.</span>
+          <span>Built so that</span>
+          <span class="line-2">answers can be checked.</span>
         </h1>
         <section class="s intro">
           <div>
             <h2 class="c intro heading">Our Architecture</h2>
             <div class="c intro text">
               <p>
-                One central choice, from which everything else follows: the atomic unit is not a token, not a chunk of text, not an entity &mdash; it is a <b>claim</b>.
+                One commitment, from which everything else follows: what Figoya keeps is not text &mdash; it is <b>claims</b>.
               </p>
             </div>
           </div>
@@ -38,66 +38,71 @@
         <section class="s claim-graph">
           <div>
             <div class="c claim-graph heading banner">
-              <h2>The claim graph</h2>
+              <h2>What Figoya keeps</h2>
             </div>
           </div>
           <div>
             <div class="c claim-graph text">
               <p>
-                A claim is a statement, question, instruction, decision, constraint, correction, hypothesis or reflection &mdash; made explicit, with structure around it. Everything else in the substrate is consequence.
+                A claim is an individual statement, made explicit, attributable, and connected to what it rests on. We aren&rsquo;t going to walk you through how that is built. What follows is what it gives you.
               </p>
             </div>
             <div class="c claim-graph items">
               <ul>
                 <li>
-                  <h3>Each claim is a node.</h3>
-                  <p>Claims carry their content, type, source-document lineage (so the original paragraph can be reconstructed), and the actor who made or recorded them. Confidence is first-class: every claim carries an epistemic-confidence score.</p>
+                  <h3>Claims, not documents.</h3>
+                  <p>A document that enters Figoya isn&rsquo;t filed away as a block of text to be searched later. What it asserts is made explicit, statement by statement, and every statement keeps a route back to the paragraph it came from.</p>
                 </li>
                 <li>
-                  <h3>Equivalent claims are linked, and every voice is kept.</h3>
-                  <p>When the same proposition appears in multiple sources, the claims are joined by an equivalence relation &mdash; one proposition, many assertions, each with its own lineage and actor. What reads as a single canonical answer is a view computed over that equivalence at query time, so the graph gets denser, not noisier, as the corpus grows &mdash; and no source&rsquo;s voice is ever merged away.</p>
+                  <h3>Every voice is kept.</h3>
+                  <p>When ten documents assert the same thing, Figoya keeps one proposition and ten assertions of it, each with its own author and source. Nothing is merged away. The single clean answer you read is a view over that, worked out when you ask.</p>
                 </li>
                 <li>
-                  <h3>Epistemic edges express how claims relate.</h3>
-                  <p>The edge types are grounded in epistemology and argumentation theory: <em>supports</em>, <em>contradicts</em>, <em>clarifies</em>, <em>depends-on</em>, <em>answers</em>, <em>supersedes</em>, alongside equivalence. Reasoning structure is data, not narrative &mdash; which is what makes questions like <q>what contradicts this?</q> and <q>what rests on this?</q> queries rather than research projects.</p>
+                  <h3>Relationships are recorded, not narrated.</h3>
+                  <p>What supports what, what contradicts what, what has been superseded by what &mdash; recorded as structure rather than buried in prose. That is what makes <q>what contradicts this?</q> a question you can ask rather than a research project.</p>
                 </li>
                 <li>
-                  <h3>Slices are how queries are answered.</h3>
-                  <p>A slice is a question-scoped subset of the graph &mdash; the claims and edges relevant to a specific question, with lineage and confidence preserved. What you get back is a slice rendered into prose: not a search result, not a generated answer, but a structured object whose substance you can inspect.</p>
+                  <h3>Confidence is carried, not implied.</h3>
+                  <p>Every claim carries how well founded it is, so the answer can tell you &mdash; instead of sounding equally sure about everything.</p>
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section class="s pipelines">
+        <section class="s flow">
           <div>
-            <div class="c pipelines heading banner">
-              <h2>The three pipelines</h2>
+            <div class="c flow heading banner">
+              <h2>From document to answer</h2>
             </div>
           </div>
           <div>
-            <div class="c pipelines items">
+            <div class="c flow items">
               <ol class="cards per-3">
-                <li class="c pipelines item pgp">
+                <li class="c flow item document">
                   <div>
-                    <h3><em>PGP</em> generation</h3>
-                    <p>Documents enter, claims come out. Stage 1 normalises any input format into a canonical structured form. Stage 2 semantically interprets that structure across multiple passes, preserving ambiguity rather than averaging it away. Stage 3 deterministically synthesises the result into the canonical claim format. Language models are used for interpretation &mdash; enclosed in structure that prevents drift.</p>
+                    <h3>A <em>document</em> comes in</h3>
+                    <p>What it asserts is made explicit and connected to everything already there. Not indexed for later searching &mdash; read once, properly, so that every later answer can be traced back to it.</p>
                   </div>
                 </li>
-                <li class="c pipelines item prp">
+                <li class="c flow item question">
                   <div>
-                    <h3><em>PRP</em> response</h3>
-                    <p>Query enters, answer comes out. The prompt is translated into a structured representation of intent; from it, a query plan is <em>compiled</em> &mdash; deterministically, not improvised by a model &mdash; and executed against the graph. The slice is rendered into prose, then validated back against the graph: every claim in the answer must map to a graph node with lineage. Claims that don&rsquo;t map are rejected.</p>
+                    <h3>A <em>question</em> comes in</h3>
+                    <p>It is answered from that structure, with a language model doing one job only: writing it up. Anything in the write-up that isn&rsquo;t backed by a recorded claim is rejected before it reaches you.</p>
                   </div>
                 </li>
-                <li class="c pipelines item ggp">
+                <li class="c flow item change">
                   <div>
-                    <h3><em>GGP</em> change</h3>
-                    <p>The graph is not static. When claims change, GGP propagates the change through equivalence, edge updates, supersession marking and lineage tracking &mdash; surgical updates rather than re-indexing. Change is a first-class event: the graph can show what a change touches before you make it, and what stopped holding after it.</p>
+                    <h3><em>Something</em> changes</h3>
+                    <p>The change is carried through everything that rested on it. Which is why Figoya can show you what a change will touch before you make it, and what no longer stands afterwards.</p>
                   </div>
                 </li>
               </ol>
+            </div>
+            <div class="c flow text">
+              <p>
+                How each of those works is ours. <b>That it works is measurable, and we measure it.</b>
+              </p>
             </div>
           </div>
         </section>
@@ -105,27 +110,16 @@
         <section class="s lands">
           <div>
             <div class="c lands heading banner">
-              <h2>Where this lands, concretely</h2>
+              <h2>What this fixes</h2>
             </div>
           </div>
           <div>
-            <div class="c lands stats">
-              <div class="c lands stat">
-                <span class="figure">16</span>
-                <span class="caption">common AI failure modes in regulated work</span>
-              </div>
-              <div class="c lands stat">
-                <span class="figure">8</span>
-                <span class="caption">structurally resolved by the substrate</span>
-              </div>
-              <div class="c lands stat">
-                <span class="figure">6</span>
-                <span class="caption">substantially mitigated</span>
-              </div>
-            </div>
             <div class="c lands text">
               <p>
-                Fabrication, no lineage, weak lineage, smoothed contradictions, drifting retrieval, inconsistent answers across runs, unstated uncertainty, retrieval miss, and others &mdash; leaving only two partial cases. <b>The substrate is doing the work, not patches.</b> Full coverage analysis available on request.
+                The failure modes that rule current AI out of regulated work &mdash; invented specifics, untraceable sources, contradictions smoothed away, drifting retrieval, different answers on different days, confidence unrelated to certainty &mdash; are <b>addressed by how the system is built, not patched at the edges.</b>
+              </p>
+              <p>
+                We have a full analysis of which of these are resolved outright and which are mitigated. It is available under NDA.
               </p>
             </div>
           </div>
@@ -140,29 +134,29 @@
           <div>
             <div class="c privacy text">
               <p>
-                The architecture works by structuring meaning, not by learning from it. Figoya does not need to train on user data. The system can run on customer infrastructure &mdash; on-premise, air-gapped, or in a regulated jurisdiction. <b>Privacy is credible by design, not by contract.</b>
+                The system works by structuring what you give it, not by learning from it. Figoya does not need to train on your data. It can run on your own infrastructure &mdash; on-premise, air-gapped, or inside a particular jurisdiction. <b>Privacy is a property of the design, not a promise in a contract.</b>
               </p>
             </div>
           </div>
         </section>
 
-        <section class="s substrate">
+        <section class="s foundation">
           <div>
-            <div class="c substrate heading banner">
-              <h2>One substrate, many surfaces</h2>
+            <div class="c foundation heading banner">
+              <h2>One foundation, many surfaces</h2>
             </div>
           </div>
           <div>
-            <div class="c substrate text">
+            <div class="c foundation text">
               <p>
-                The graph is the asset. Surfaces above it &mdash; Figoya Docs, Ingest, Create, People, Market, Chat &mdash; read from and write to the same graph. Domain Packs configure the graph for a specific vertical without rebuilding anything. VerticalCos build their own products on top of the Figoya API.
+                The record is the asset, and every Figoya surface reads and writes the same one: Docs, Ingest, Create, People, Market, Chat. Domain configurations adapt it to a particular industry without rebuilding anything, and other companies build their own products on top of it through the Figoya API.
               </p>
               <p>
-                The architecture is general enough that we use it to build itself &mdash; the Figoya project&rsquo;s own thinking lives as a claim graph of five-hundred-odd claims across four linked corpora; our working method is slice retrieval.
+                Our own work sits in it too. Figoya&rsquo;s architecture, strategy and decisions live in Figoya, and that is how we work on it every day.
               </p>
             </div>
-            <div class="c substrate closer">
-              <p>The substrate is its own first customer.</p>
+            <div class="c foundation closer">
+              <p>The foundation is its own first customer.</p>
             </div>
           </div>
         </section>

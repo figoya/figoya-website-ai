@@ -14,7 +14,8 @@
 @media only screen {
   .s.build-graph, .s.pattern, .s.verticalco, .s.platform, .s.privacy,
   .s.claims-not-facts, .s.separation, .s.meaning, .s.validation,
-  .s.why-matters, .s.recall, .s.standing, .s.sequence {
+  .s.why-matters, .s.recall, .s.standing, .s.sequence, .s.lands,
+  .s.simplest, .s.simplest-pain, .s.oi-pain {
     position: relative;
     z-index: 1;
     color: #1d1d1b;
@@ -25,7 +26,9 @@
   .s.separation > div:nth-child(1), .s.meaning > div:nth-child(1),
   .s.validation > div:nth-child(1), .s.why-matters > div:nth-child(1),
   .s.recall > div:nth-child(1), .s.standing > div:nth-child(1),
-  .s.sequence > div:nth-child(1) {
+  .s.sequence > div:nth-child(1), .s.lands > div:nth-child(1),
+  .s.simplest > div:nth-child(1), .s.simplest-pain > div:nth-child(1),
+  .s.oi-pain > div:nth-child(1) {
     margin-bottom: 3rem;
     text-align: center;
   }
@@ -109,9 +112,9 @@
 /* ============ Style C — chamfered cards ============ */
 
 @media only screen {
-  .s.why-figoya > div:nth-child(1), .s.learn-more > div:nth-child(1),
+  .s.learn-more > div:nth-child(1),
   .s.use-graph > div:nth-child(1), .s.falls-out > div:nth-child(1),
-  .s.triad > div:nth-child(1), .s.pipelines > div:nth-child(1) {
+  .s.triad > div:nth-child(1), .s.flow > div:nth-child(1) {
     margin-bottom: 3rem;
     text-align: center;
   }
@@ -169,7 +172,7 @@
 /* ============ Style D — dark bands, edge to edge ============ */
 
 @media only screen {
-  .s.proof, .s.not-bugs, .s.built, .s.long-arc, .s.substrate, .s.no-oracle {
+  .s.proof, .s.not-bugs, .s.built, .s.long-arc, .s.foundation, .s.no-oracle {
     background: #252625;
     color: #eee;
     width: 100vw;
@@ -178,50 +181,50 @@
     padding-right: 2rem;
   }
   .s.proof > div, .s.not-bugs > div, .s.built > div, .s.long-arc > div,
-  .s.substrate > div, .s.no-oracle > div {
+  .s.foundation > div, .s.no-oracle > div {
     max-width: 92rem;
     margin: 0 auto;
   }
   .s.proof > div:nth-child(1), .s.not-bugs > div:nth-child(1),
   .s.built > div:nth-child(1), .s.long-arc > div:nth-child(1),
-  .s.substrate > div:nth-child(1), .s.no-oracle > div:nth-child(1) {
+  .s.foundation > div:nth-child(1), .s.no-oracle > div:nth-child(1) {
     margin-bottom: 3rem;
     text-align: center;
   }
   .s.proof h2, .s.not-bugs h2, .s.built h2, .s.long-arc h2,
-  .s.substrate h2, .s.no-oracle h2 {
+  .s.foundation h2, .s.no-oracle h2 {
     color: #fff;
   }
   .s.proof h2 em, .s.not-bugs h2 em, .s.built h2 em, .s.long-arc h2 em,
-  .s.substrate h2 em, .s.no-oracle h2 em {
+  .s.foundation h2 em, .s.no-oracle h2 em {
     color: #9dc41a;
   }
   .s.proof h3, .s.not-bugs h3, .s.built h3, .s.long-arc h3,
-  .s.substrate h3, .s.no-oracle h3 {
+  .s.foundation h3, .s.no-oracle h3 {
     color: #c6d768;
   }
   .s.proof .c.text h3, .s.not-bugs .c.text h3, .s.built .c.text h3,
-  .s.long-arc .c.text h3, .s.substrate .c.text h3, .s.no-oracle .c.text h3 {
+  .s.long-arc .c.text h3, .s.foundation .c.text h3, .s.no-oracle .c.text h3 {
     color: #c6d768;
   }
   .s.proof b, .s.not-bugs b, .s.built b, .s.long-arc b,
-  .s.substrate b, .s.no-oracle b {
+  .s.foundation b, .s.no-oracle b {
     color: #c6d768;
   }
   .s.proof a, .s.not-bugs a, .s.built a, .s.long-arc a,
-  .s.substrate a, .s.no-oracle a {
+  .s.foundation a, .s.no-oracle a {
     color: #c6d768;
   }
   .s.proof .c.pull, .s.not-bugs .c.pull, .s.built .c.pull,
-  .s.long-arc .c.pull, .s.substrate .c.pull, .s.no-oracle .c.pull {
+  .s.long-arc .c.pull, .s.foundation .c.pull, .s.no-oracle .c.pull {
     color: #fff;
   }
   .s.proof .c.pull b, .s.not-bugs .c.pull b, .s.built .c.pull b,
-  .s.long-arc .c.pull b, .s.substrate .c.pull b, .s.no-oracle .c.pull b {
+  .s.long-arc .c.pull b, .s.foundation .c.pull b, .s.no-oracle .c.pull b {
     color: #9dc41a;
   }
   .s.proof .c.label, .s.not-bugs .c.label, .s.built .c.label,
-  .s.long-arc .c.label, .s.substrate .c.label, .s.no-oracle .c.label {
+  .s.long-arc .c.label, .s.foundation .c.label, .s.no-oracle .c.label {
     background: #9dc41a;
     color: #1d1d1b;
   }
@@ -295,7 +298,7 @@
     padding: 1.4rem 2rem;
   }
   .s.proof .c.closer p, .s.not-bugs .c.closer p, .s.built .c.closer p,
-  .s.long-arc .c.closer p, .s.substrate .c.closer p, .s.no-oracle .c.closer p {
+  .s.long-arc .c.closer p, .s.foundation .c.closer p, .s.no-oracle .c.closer p {
     color: #9dc41a;
   }
 }
