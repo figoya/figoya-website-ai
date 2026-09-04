@@ -522,7 +522,7 @@ Families live in `_/css/section/shared.css`: **A** prose · **B** item lists wit
 | `claims-not-facts` | philosophy | A |
 | `falls-out` | solution | C |
 | `intro` | all | `site.css` — the hero contract (SITE-1, SITE-5) |
-| `lands` | architecture | A |
+| `lands` | architecture | A, plus the role-level `stats` row (E) |
 | `learn-more` | home | C |
 | `long-arc` | vision | D |
 | `meaning` | philosophy | A |
